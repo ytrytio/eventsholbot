@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <audio id="click_sound" src="click.mp3" preload="auto"></audio>
+
+    <div id="main" style="text-align: center;">
+      <h1 id="menu-text" style="text-align: center; font-size: 50px;">
+        <p class="main-text">
+          Главное меню
+        </p>
+      </h1>
+      <button id="bank" class="button-container" onclick="document.getElementById('click_sound').play();">
+        <span class="material-symbols-outlined">
+          attach_money
+        </span>
+        <p class="main-button">Банк</p>
+      </button>
+      <button id="shop" class="button-container" onclick="document.getElementById('click_sound').play();">
+        <span class="material-symbols-outlined">
+          shopping_cart
+        </span>
+        <p class="main-button">Магазин</p>
+      </button>
+      <button id="donate" class="button-container" onclick="document.getElementById('click_sound').play();">
+        <span class="material-symbols-outlined">
+          payments
+        </span>
+        <p class="main-button">Донат магазин</p>
+      </button>
+      <button id="settings" class="button-container" onclick="document.getElementById('click_sound').play();">
+        <span class="material-symbols-outlined">
+          manage_accounts
+          </span>
+        <p class="main-button">Настройки</p>
+      </button>
+      <button id="gpu" class="button-container" onclick="document.getElementById('click_sound').play();">
+        <span class="material-symbols-outlined">
+          currency_bitcoin
+        </span>
+        <p class="main-button">Майнинг</p>
+      </button>
+      <button id="clans" class="button-container" onclick="document.getElementById('click_sound').play();">
+        <span class="material-symbols-outlined">
+          group
+        </span>
+        <p class="main-button">Кланы</p>
+      </button>
+    </div>
+
+
+
+    <div id="bank-main" style="text-align: center;">
+      <h1 id="balance" style="text-align: center; font-size: 50px;">
+        <p class="main-text">
+          ???
+        </p>
+      </h1>
+      <button id="back" class="ui-button" onclick="document.getElementById('click_sound').play();">
+        <span class="material-symbols-outlined">
+          keyboard_backspace
+          <p class="button-text">
+            Назад
+          </p>
+        </span>
+
+      </button>
+    </div>
+
+    
+    <style>
+
+      #main {
+        background: var(--tg-theme-bg_color);
+      }
+
+      #bank-main {
+        display: none;
+      }
+      @font-face {
+        font-family: 'fontello';
+        src: url(font.ttf);
+      }
+      .material-symbols-outlined {
+        font-size: 250px;
+      }
+      .main-button {
+        font-size: 30px;
+        font-family: 'fontello';
+      }
+      .button-text {
+        position: relative;
+        font-size: 30px;
+        font-family: 'fontello';
+      }
+
+      .main-text {
+        font-family: 'fontello';
+      }
+
+
+
+      .button-container {
+        
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 35px;
+        border: 3px solid;
+        background: var(--tg-theme-main-button-color);
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        transition: 0.2s;
+        
+      }
+
+
+      .ui-button {
+        height: 2%;
+        width: 75%;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 35px;
+        border: 3px solid;
+        background: var(--tg-theme-main-button-color);
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        transition: 0.2s;
+      }
+
+      
+
+      button:hover {
+        box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+        transform: translateY(-1em);
+        background-color: #838383;
+      }
+
+      
+
+      
+    </style>
+    <script>
+      let tg = window.Telegram.WebApp;
+
+      let bank = document.getElementById('bank');
+      let shop = document.getElementById('shop');
+      let donate = document.getElementById('donate');
+      let settings = document.getElementById('settings');
+      let gpu = document.getElementById('gpu');
+      let clans = document.getElementById('clans');
+
+      let main = document.getElementById('main');
+      let bankMain = document.getElementById('bank-main');
+
+      let balance = document.getElementById('balance');
+
+      let back = document.getElementById('back');
+
+
+      bank.addEventListener("click", () => {
+        main.style.display = 'none';
+        bankMain.style.display = 'block';
+      });
+
+      back.addEventListener("click", () => {
+        main.style.display = 'block';
+        bankMain.style.display = 'none';
+      });
+
+    </script>
+  </body>
+</html>

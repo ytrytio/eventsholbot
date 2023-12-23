@@ -1,0 +1,31 @@
+{
+  "name": "testgame",
+  "version": "1.0.0",
+  "description": "TestGameForBot",
+  "main": "index.js",
+  "start": "node index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "dev2": "nodemon main.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "js",
+    "telegram"
+  ],
+  "author": "Glor, Kobo",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/dialogflow": "^6.0.0",
+    "@google-cloud/speech": "^6.0.1",
+    "express": "^4.18.2",
+    "language-detector": "^1.0.1",
+    "linguist": "^0.2.1",
+    "markdown-escape": "^2.0.0",
+    "node-telegram-bot-api": "^0.61.0",
+    "nodemon": "^3.0.1",
+    "sqlite3": "^5.1.6",
+    "telegraf": "^4.12.2",
+    "uuid": "^9.0.0"
+  }
+}
